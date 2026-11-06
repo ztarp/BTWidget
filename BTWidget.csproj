@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RollForward>LatestMajor</RollForward>
+    <Version>1.0.0</Version>
+    <AssemblyName>BTWidget</AssemblyName>
+    <RootNamespace>BTWidget</RootNamespace>
+    <Product>BTWidget</Product>
+    <Description>Floating battery widget for connected Bluetooth devices.</Description>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <!-- Tray icon and screen bounds. Referenced directly so Windows Forms
+       types are not imported globally and do not clash with WPF. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+  </ItemGroup>
+
+</Project>
